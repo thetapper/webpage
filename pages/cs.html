@@ -20,9 +20,30 @@
         <h1>  </h1>
         <h1>Computer Science</h1>
         
-        <section class="passion-section">
+        <section class="terminal-section">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-button red"></span>
+                    <span class="terminal-button yellow"></span>
+                    <span class="terminal-button green"></span>
+                    <span class="terminal-title">terminal</span>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="terminal-prompt">visitor@portfolio:~$</span> <span class="terminal-command">whoami</span></p>
+                    <p class="terminal-output">Micah Wakefield - CS Student & Developer</p>
+                    <p><span class="terminal-prompt">visitor@portfolio:~$</span> <span class="terminal-command">cat interests.txt</span></p>
+                    <p class="terminal-output">AI | Cybersecurity | Full-Stack Development</p>
+                    <p><span class="terminal-prompt">visitor@portfolio:~$</span> <span class="terminal-cursor">|</span></p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="passion-section section-alt-bg">
             <h2>My Passion</h2>
-            <p>Write about your passion for computer science here...</p>
+            <p>I've always been fascinated by how things work, especially computers and software. This curiosity led me to pursue a degree in Computer Science, where I'm learning to create and innovate in this rapidly evolving field.</p>
+               <p> With the explosive growth of AI, I want to be at the forefront of shaping this technology for the betterment of society. My goal is to create tools that enhance human ingenuity rather than replace it—allowing us to reach new heights in creativity, problem-solving, and understanding.</p>
+                <p>Of course, innovation comes with responsibility. I believe it's crucial to consider the impacts on privacy, ethics, and our environment as we push technology forward.</p>
+               <p>Computer Science isn't just a field of study for me; it's a passion that drives me to explore, create, and contribute to our technological future, specifically in AI and Cybersecurity.</p>
         </section>
 
         <section class="projects-section">
@@ -30,34 +51,37 @@
             <div class="project-grid">
                 <details class="project-card">
                     <summary>
-                        <h3>Project Title 1</h3>
+                        <h3>TradeHands</h3>
                         <p>Click to learn more...</p>
                     </summary>
                     <div class="project-details">
-                        <p><strong>Description:</strong> Detailed description of your first project goes here. Explain what you built, what technologies you used, and what you learned.</p>
-                        <p><strong>Technologies:</strong> Python, JavaScript, etc.</p>
+                        <div class="project-image">
+                            <img src="../assets/images/handshake-logo.png" alt="TradeHands Logo" style="max-width: 150px; height: auto;">
+                        </div>
+                        <p><strong>Description:</strong> In a group of 5, we created an application designed to connect business sellers with aspiring entrepreneurs. The app features user profiles, buyer profiles, business listings all with images, and a matching system to pair sellers with potential buyers.</p>
+                        <p><strong>Technologies:</strong>TypeScript & JavaScript </p>
                         <p><strong>Key Features:</strong></p>
                         <ul>
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
+                            <li>Matching System</li>
+                            <li>SQL Server</li>
+                            <li>User Friendly</li>
                         </ul>
-                        <p><strong>GitHub:</strong> <a href="#" target="_blank">View Repository</a></p>
+                        <p><strong>GitHub:</strong> <a href="https://github.com/CS262-TradeHands" target="_blank">View Repository</a></p>
                     </div>
                 </details>
                 <details class="project-card">
                     <summary>
-                        <h3>Project Title 2</h3>
+                        <h3>Tiny Teller</h3>
                         <p>Click to learn more...</p>
                     </summary>
                     <div class="project-details">
-                        <p><strong>Description:</strong> Detailed description of your second project goes here. Explain what you built, what technologies you used, and what you learned.</p>
-                        <p><strong>Technologies:</strong> C++, Ada, etc.</p>
+                        <p><strong>Description:</strong> A simplified attempt to create an application which can take text and speech to which it can then create a visual summarization infographic.</p>
+                        <p><strong>Technologies:</strong> Python</p>
                         <p><strong>Key Features:</strong></p>
                         <ul>
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                            <li>Feature 3</li>
+                            <li>Text summarization</li>
+                            <li>Speach summarization</li>
+                            <li>infographic Generator</li>
                         </ul>
                         <p><strong>GitHub:</strong> <a href="#" target="_blank">View Repository</a></p>
                     </div>
@@ -65,7 +89,7 @@
             </div>
         </section>
 
-        <section class="education-section">
+        <section class="education-section section-alt-bg">
             <h2>Education</h2>
             <div class="education-item">
                 <h3>Calvin University</h3>
@@ -77,19 +101,35 @@
         <section class="experience-section">
             <h2>Experience</h2>
             <div class="experience-item">
-                <h3>Job Title - Company Name</h3>
-                <p class="experience-date">Date Range</p>
-                <p>Description of your responsibilities and achievements...</p>
+                <h3>Actor & Assistant Musical Director - Trumpet in the Land</h3>
+                <p class="experience-date">Summer 2024</p>
+                <p>Performed in ensemble for Trumpet in the Land (Ohio's official state play) and as Herald in Cinderella at Schoenbrunn Amphitheatre in New Philadelphia, OH</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Parks & Recreation Maintenance Crew - City of Lakewood</h3>
+                <p class="experience-date">Summer 2023-2024</p>
+                <p>Maintained public parks, serviced sprinkler systems, and managed facility cleaning with strong time management and attention to detail</p>
             </div>
         </section>
 
-        <h2>Resume</h2>
-        <div class="resume-container">
-            <iframe src="../assets/resumes/cs_resume.html" frameborder="0"></iframe>
-        </div>
+        <section class="section-alt-bg">
+            <h2>Resume</h2>
+            <div class="resume-container">
+                <iframe src="../assets/resumes/cs_resume.html" frameborder="0"></iframe>
+            </div>
+        </section>
     </main>
 
     <script>
+        // Terminal cursor blinking animation
+        const cursor = document.querySelector('.terminal-cursor');
+        if (cursor) {
+            setInterval(() => {
+                cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+            }, 500);
+        }
+
         // Close other project cards when one is opened
         document.querySelectorAll('.project-card').forEach(card => {
             card.addEventListener('toggle', function() {
