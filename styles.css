@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
 }
@@ -116,6 +116,11 @@ h2 {
 .about-text{
     flex: 1;
 }
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
 section {
     margin-bottom: 2rem;
 }
@@ -188,4 +193,248 @@ section {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.passion-section,
+.projects-section,
+.education-section,
+.experience-section {
+    margin-bottom: 3rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+    align-items: start;
+}
+
+.project-card {
+    padding: 1.5rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.project-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.project-card summary h3 {
+    margin-top: 0;
+    color: #333;
+    display: inline-block;
+}
+
+.project-card summary h3::after {
+    content: ' ▼';
+    font-size: 0.8em;
+    color: #666;
+}
+
+.project-card[open] summary h3::after {
+    content: ' ▲';
+}
+
+.project-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-details ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.project-details a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-details a:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.education-item,
+.experience-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-left: 4px solid #333;
+    border-radius: 4px;
+}
+
+.education-item h3,
+.experience-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.experience-date {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.theatre-intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+
+.theatre-image {
+    background-image: url('./assets/images/MicahWakefield.JPG');
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.theatre-text {
+    flex: 1;
+}
+
+.theatre-text a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.theatre-text a:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
+.dance-reel-section,
+.skills-section,
+.training-section {
+    margin-bottom: 3rem;
+}
+
+.video-container {
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 8px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.skill-category {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #333;
+}
+
+.skill-category h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.skill-category ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.skill-category li {
+    margin-bottom: 0.5rem;
+}
+
+.training-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-left: 4px solid #333;
+    border-radius: 4px;
+}
+
+.training-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
 }

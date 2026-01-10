@@ -12,16 +12,96 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="cs.html" class="active">Computer Science</a></li>
             <li><a href="theatre.html">Theatre</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
         </ul>
     </nav>
     
     <main>
-        <h1> </h1>
-        <h1>Computer Science Resume</h1>
+        <h1>  </h1>
+        <h1>Computer Science</h1>
         
+        <section class="passion-section">
+            <h2>My Passion</h2>
+            <p>Write about your passion for computer science here...</p>
+        </section>
+
+        <section class="projects-section">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <details class="project-card">
+                    <summary>
+                        <h3>Project Title 1</h3>
+                        <p>Click to learn more...</p>
+                    </summary>
+                    <div class="project-details">
+                        <p><strong>Description:</strong> Detailed description of your first project goes here. Explain what you built, what technologies you used, and what you learned.</p>
+                        <p><strong>Technologies:</strong> Python, JavaScript, etc.</p>
+                        <p><strong>Key Features:</strong></p>
+                        <ul>
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                        <p><strong>GitHub:</strong> <a href="#" target="_blank">View Repository</a></p>
+                    </div>
+                </details>
+                <details class="project-card">
+                    <summary>
+                        <h3>Project Title 2</h3>
+                        <p>Click to learn more...</p>
+                    </summary>
+                    <div class="project-details">
+                        <p><strong>Description:</strong> Detailed description of your second project goes here. Explain what you built, what technologies you used, and what you learned.</p>
+                        <p><strong>Technologies:</strong> C++, Ada, etc.</p>
+                        <p><strong>Key Features:</strong></p>
+                        <ul>
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                        <p><strong>GitHub:</strong> <a href="#" target="_blank">View Repository</a></p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="education-section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Calvin University</h3>
+                <p>B.S. in Computer Science, Minor in Theatre</p>
+                <p>Expected Graduation: May 2027</p>
+            </div>
+        </section>
+
+        <section class="experience-section">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Job Title - Company Name</h3>
+                <p class="experience-date">Date Range</p>
+                <p>Description of your responsibilities and achievements...</p>
+            </div>
+        </section>
+
+        <h2>Resume</h2>
         <div class="resume-container">
             <iframe src="../assets/resumes/cs_resume.html" frameborder="0"></iframe>
         </div>
     </main>
+
+    <script>
+        // Close other project cards when one is opened
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('toggle', function() {
+                if (this.open) {
+                    document.querySelectorAll('.project-card').forEach(otherCard => {
+                        if (otherCard !== this && otherCard.open) {
+                            otherCard.open = false;
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
