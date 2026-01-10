@@ -438,3 +438,107 @@ section {
     font-size: 0.9rem;
     color: #555;
 }
+
+/* Terminal Styling */
+.terminal-section {
+    margin-bottom: 3rem;
+}
+
+.terminal {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Courier New', monospace;
+}
+
+.terminal-header {
+    background-color: #2d2d2d;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.terminal-button.red {
+    background-color: #ff5f56;
+}
+
+.terminal-button.yellow {
+    background-color: #ffbd2e;
+}
+
+.terminal-button.green {
+    background-color: #27c93f;
+}
+
+.terminal-title {
+    color: #999;
+    font-size: 0.85rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.terminal-body {
+    padding: 1.5rem;
+    color: #d4d4d4;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.terminal-body p {
+    margin: 0.25rem 0;
+}
+
+.terminal-prompt {
+    color: #4ec9b0;
+    font-weight: bold;
+}
+
+.terminal-command {
+    color: #dcdcaa;
+}
+
+.terminal-output {
+    color: #ce9178;
+    padding-left: 1rem;
+}
+
+.terminal-cursor {
+    color: #d4d4d4;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Section Background Colors */
+.section-alt-bg {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.project-image {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.project-image img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
