@@ -343,7 +343,31 @@ section {
     text-decoration: underline;
 }
 
-.dance-reel-section,
+.dance-reel-section {
+    padding: 3rem 0;
+    width: 100%;
+}
+
+.dance-reel-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.dance-reel-section .video-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: transparent;
+}
+
+.dance-reel-section video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 .skills-section,
 .training-section {
     margin-bottom: 3rem;
@@ -632,6 +656,23 @@ section {
 
 .modal-nav.prev {
     left: 20px;
+}
+
+.modal-nav.next {
+
+    right: 20px;
+}
+
+#caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
 }
 
 .modal-nav.next {
