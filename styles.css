@@ -659,7 +659,6 @@ section {
 }
 
 .modal-nav.next {
-
     right: 20px;
 }
 
@@ -675,18 +674,24 @@ section {
     border-radius: 4px;
 }
 
-.modal-nav.next {
-    right: 20px;
+.spacer {
+    height: 80px;
 }
 
-#caption {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f4f4f4;
+    margin-top: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-logo-img {
+    width: 40px;
+    height: 40px;
 }
